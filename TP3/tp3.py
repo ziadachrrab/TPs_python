@@ -62,7 +62,7 @@ def afficher_surface(formes):
   for forme in formes:
       print(f"La surface est : {forme.calculer_surface()}")
 
-formes = [Cercle(5), Rectangle(4, 6)]
+formes = [cercle(5), rectangle(4, 6)]
 afficher_surface(formes)
 
 # --------------------------------------------------------------------------
