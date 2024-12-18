@@ -9,6 +9,9 @@ class forme(ABC):
         pass
 
 class cercle(forme):
+    def __init(self):
+       pass
+
     def __init__(self, rayon):
         self.rayon = rayon
 
@@ -27,32 +30,72 @@ class rectangle(forme):
 
 # ex2        
 
+# getters & setters
+
+# class personne:
+#     def __init__(self):
+#       pass
+
+#     def __init__(self, nom, prenom, age):
+#         self._nom = nom
+#         self._prenom = prenom
+#         self._age = age
+    
+#     def get_nom(self):
+#         return self._nom
+    
+#     def set_nom(self, nom):
+#       self.__nom = nom
+
+#     def get_prenom(self):
+#       return self.__prenom
+
+#     def set_prenom(self, prenom):
+#       self.__prenom = prenom
+
+#     def get_age(self):
+#       return self.__age
+
+#     def set_age(self, age):
+#       if age >= 0:
+#           self.__age = age
+#       else:
+#           raise ValueError("L'âge ne peut pas être négatif.")
+
+# using @property methhod
+
 class personne:
-    def _init_(self, nom, prenom, age):
+    def __init__(self):
+       pass
+
+    def __init__(self, nom, prenom, age):
         self._nom = nom
         self._prenom = prenom
         self._age = age
 
-    def get_nom(self):
-        return self._nom
+    @property
+    def nom(self):
+       return self._nom
     
-    def set_nom(self, nom):
-      self.__nom = nom
+    @nom.setter
+    def nom(self, nom):
+       self._nom = nom
+    
+    @property
+    def prenom(self):
+        return self._prenom
+    
+    @prenom.setter
+    def prenom(self, prenom):
+       self._prenom = prenom
 
-    def get_prenom(self):
-      return self.__prenom
-
-    def set_prenom(self, prenom):
-      self.__prenom = prenom
-
-    def get_age(self):
-      return self.__age
-
-    def set_age(self, age):
-      if age >= 0:
-          self.__age = age
-      else:
-          raise ValueError("L'âge ne peut pas être négatif.")
+    @property
+    def age(self):
+       return self._age
+    
+    @age.setter
+    def age(self, age):
+       self._age = age
 
 # --------------------------------------------------------------------------
 
@@ -70,6 +113,9 @@ afficher_surface(formes)
 # ex4
 
 class Produit:
+  def __init__(self):
+     pass
+  
   def __init__(self, nom, prix):
       self.__nom = nom
       self.__prix = prix
@@ -89,6 +135,9 @@ class Produit:
 # ex5
 
 class Employe:
+  def __init__(self):
+     pass
+  
   def __init__(self, nom, prenom, salaire):
       self.nom = nom
       self.prenom = prenom
@@ -111,6 +160,9 @@ class Manager(Employe):
 # ex6
 
 class Commande:
+  def __init__(self):
+     pass
+  
   def __init__(self, produit, quantite):
       self.produit = produit
       self.quantite = quantite
